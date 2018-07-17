@@ -26,3 +26,4 @@ let obj1 = {
   [cccc]: 3// nameliwei: 3
 }
 console.log(obj1);
+//test github
