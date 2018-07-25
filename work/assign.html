@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script src="jquery-1.8.3.min.js"></script>
+<script src="assign.js"></script>
+<body>
+    <input type="text">
+    <button>确定</button>
+    <script>
+        let i = $('input');
+        $('button').click(() => {
+            let result = assign(i, 1);
+            console.log(result)
+        })
+    </script>
+</body>
+</html>
