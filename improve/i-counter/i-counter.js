@@ -2,6 +2,7 @@ class Counter {
     count() {
         let time = 5;
         let i = 0;
+        let that = this;
         let timmer = function() {
             setTimeout(function() {
                 console.log(time);
@@ -10,11 +11,16 @@ class Counter {
                 if (time >= 0) {
                     timmer();
                 } else {
-                    console.log('end')
+                    console.log('end');
+                    that.a();
                 }
             },1000 * i);
         }
         timmer();
+    }
+
+    a() {
+        console.log('这是a函数')
     }
 }
 let c = new Counter();
