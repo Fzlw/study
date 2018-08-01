@@ -32,4 +32,9 @@
 
 1. wallet/card 页面
 	* event.path什么意思，点击事件
-      	 
+	* 开户银行卡号返回字段给每个添加对影code有必要吗，好做判断
+	* 请求地址列表地址，get方式下是否需要？page改变
+	* promise对象
+	* 周末利用mock生成接口去测试promise包promise
+	* 类型继续统一
+1. 
