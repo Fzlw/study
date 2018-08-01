@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="zepto-1.2.0.js"></script>
+  <style>
+    .con{
+      width: 100px;
+      height: 50px;
+      background-color:red;
+      position: relative;
+    }
+    .text{
+      width: 100px;
+      height: 50px;
+      position: absolute;
+    }
+    ul{
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 50px;
+      display: none;
+    }
+    li{
+      width: 100px;
+      height: 50px;
+      margin-top: 10px;
+      background-color: #327BC8;
+    }
+  </style>
+</head>
+<body>
+    <div class="con">
+        <div class="text">1</div>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+    </div>
+
+    <script>
+        $('.con').click(function(e) {
+            $('ul').show();
+            e.stopPropagation();
+        })
+        $('li').click(function(e) {
+            $('.text').text($(this).text());
+            $('ul').hide()
+            e.stopPropagation();
+        })
+        $(document).click(() => {
+          $('ul').hide()
+        })
+    </script>
+</body>
+</html>

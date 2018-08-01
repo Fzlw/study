@@ -37,4 +37,7 @@
 	* promise对象
 	* 周末利用mock生成接口去测试promise包promise
 	* 类型继续统一
-1. 
+1. wallet/account
+	* 优化资产相关的数据渲染结构
+	* todo提现按钮功能
+	* 优化明细的样式和xtpl结构
