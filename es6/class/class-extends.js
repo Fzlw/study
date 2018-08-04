@@ -18,7 +18,8 @@ class B extends A {
         this.c = 30;
         this.bb();
         // 静态方法只能通过构造函数的属性或者使用类名来调用
-        this.constructor.aa()
+        this.constructor.aa();
+        A.aa();
     }
     bb() {
         console.log(3)

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="../jquery-1.8.3.min.js"></script>
+  <script src="classA.js"></script>
+  <script>
+  
+      class B extends A{
+          constructor() {
+            super();
+            this.ccc()
+          }
+
+          render() {
+            console.log(4)
+          }
+
+          static bbb() {
+              console.log(100)
+          }
+
+          ccc() {
+            $(document).click(() => {
+              console.log(987654321)
+            })
+          }
+
+      }
+
+      new B();
+
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
