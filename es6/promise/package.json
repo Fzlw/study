@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "promise": "^8.0.1"
+  }
+}
