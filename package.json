@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "不断学习，坚持学习",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "uuid": "^3.3.2"
+  },
   "devDependencies": {
     "bluebird": "^3.5.1",
-    "promise": "^8.0.1"
+    "promise": "^8.0.1",
+    "uuid": "^3.3.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

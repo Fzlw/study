@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    class P {
+      constructor(x) {
+        this.a = x;
+      }
+
+      init() {
+        console.log(this.a);
+      }
+
+      static come() {
+          console.log(35635)
+      }
+    }
+
+
+    class Pa extends P {
+        constructor() {
+            super(2);
+            this.go()
+        }
+        go() {
+            P.come()
+        }
+    }
+
+    let p = new P();
+    let p2 = new P();
+    let pa = new Pa();
+
+    console.log(p.prototype === p2.prototype)
+    console.log(p instanceof P)
+    console.log(Object.getOwnPropertyNames(P.prototype))
+    console.log(Object.getOwnPropertyNames(P))
+
+    console.log(Pa.prototype.constructor === p)
+    console.log(pa)
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

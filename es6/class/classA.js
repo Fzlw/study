@@ -2,7 +2,6 @@ class A {
     constructor() {
         this.a = 10;
         this.aa = 20;
-        // console.log(this.constructor.bbb())
     }
 
     init() {
