@@ -19,10 +19,10 @@ function asyncR(read) {
 
 }
 
-// asyncR('1.txt').then(d1 => {
-//   console.log(d1)
-//     return asyncR(d1)
-// })
+asyncR('1.txt').then(d1 => {
+  console.log(d1)
+    
+})
 // .then(d2 => {
 //     console.log(d2)
 //       return asyncR(d2)
@@ -30,7 +30,8 @@ function asyncR(read) {
 // .then(d3 => {
 //     console.log(d3)
 // })
-// .catch(e => console.log(e));
+.catch(e => console.log(e));
+
 
 
 // console.log('end');
@@ -84,16 +85,20 @@ function asyncR(read) {
 //  read();
 
 
-function a() {
-  return new Promise((resolve, reject) => {
-    console.log('立即执行')
-    setTimeout(() => {
-      console.log(0654321)
-      resolve('change');
-    }, 2000)
-  })
-}
+// function a() {
+//   return new Promise((resolve, reject) => {
+//     console.log('立即执行')
+//     setTimeout(() => {
+//       console.log(0654321)
+//       resolve('change');
+//     }, 2000)
+//   })
+// }
 
-a().then(res => {
-  console.log(res);
-})
+// a().then(res => {
+//   console.log(res);
+// })
+
+
+let buf = new Buffer.from('A5 a1 c2 c5 c1 c4 c3 b3 a6 b2 b4 d1 d5');
+console.log(buf.toString('utf-8'))

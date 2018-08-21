@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "bluebird": "^3.5.1",
+    "decimal.js": "^10.0.1",
     "promise": "^8.0.1",
     "uuid": "^3.3.2"
   },
