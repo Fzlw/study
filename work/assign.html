@@ -14,13 +14,21 @@
         $('button').click(() => {
             let result = assign(i, 1);
             console.log(result)
+            window.resizeTo(200, 200);
+            window.open('www.baidu.com')
+
+
+            let str = $('input').val();
+            console.log(str.trim());
         });
 
         // 选中不存在元素会被$对象包裹一层，判断为true
-        console.log(document.getElementsByTagName('div'))
-        console.log(Boolean(document.getElementsByTagName('div')))
-        console.log($('div'));
-        console.log(Boolean($('div')));
+        // console.log(document.getElementsByTagName('div'))
+        // console.log(Boolean(document.getElementsByTagName('div')))
+        // console.log($('div'));
+        // console.log(Boolean($('div')));
     </script>
+</body>
+  
 </body>
 </html>

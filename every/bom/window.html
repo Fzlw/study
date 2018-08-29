@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="../zepto-1.2.0.js"></script>
+</head>
+<body>
+  <a href="https://www.baidu.com/" target="Frame">特殊</a>
+  <button>查看历史</button>
+
+  <script>
+      $('button').click(() => {
+          window.open('https://www.baidu.com/', '_self', )
+      })
+  </script>
+</body>
+</html>

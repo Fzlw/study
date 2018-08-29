@@ -1,0 +1,34 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "不断学习，坚持学习",
+  "main": "index.js",
+  "dependencies": {
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "bluebird": "^3.5.1",
+    "decimal.js": "^10.0.1",
+    "gm": "^1.23.1",
+    "graphicsmagick": "^0.0.1",
+    "imagemagick": "^0.1.3",
+    "isexe": "^2.0.0",
+    "promise": "^8.0.1",
+    "pseudomap": "^1.0.2",
+    "uuid": "^3.3.2",
+    "yallist": "^3.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fzlw/study.git"
+  },
+  "author": "liwei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fzlw/study/issues"
+  },
+  "homepage": "https://github.com/Fzlw/study#readme"
+}
