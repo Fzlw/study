@@ -10,8 +10,8 @@
 </head>
 
 <body>
-  <!-- <img class="img1" src="images/1.jpg" alt="">
-  <img class="img2" src="images/2.jpg" alt=""> -->
+  <img class="img1" src="images/1.jpg" alt="">
+  <!-- <img class="img2" src="images/2.jpg" alt=""> -->
   <canvas id="canvas"></canvas>
   <button>添加</button>
 
@@ -36,19 +36,19 @@
     }
 
 
-    let canvas = document.getElementById("canvas"); //获取canvas
-    let ctx = canvas.getContext("2d"); //对应的CanvasRenderingContext2D对象(画笔)
-    let img = new Image(); //创建新的图片对象
-    let base64 = ''; //base64 
-    img.Origin = '*'
+    // let canvas = document.getElementById("canvas"); //获取canvas
+    // let ctx = canvas.getContext("2d"); //对应的CanvasRenderingContext2D对象(画笔)
+    // let img = new Image(); //创建新的图片对象
+    // let base64 = ''; //base64 
+    // img.Origin = '*'
 
-    img.onload = function () { //图片加载完，再draw 和 toDataURL
-      img.Origin = '*'
-      ctx.drawImage(img, 0, 0);
-      base64 = canvas.toDataURL();
-      // console.log(base64)
-    };
-    img.src = './images/1.jpg';
+    // img.onload = function () { //图片加载完，再draw 和 toDataURL
+    //   img.Origin = '*'
+    //   ctx.drawImage(img, 0, 0);
+    //   base64 = canvas.toDataURL();
+    //   // console.log(base64)
+    // };
+    // img.src = './images/1.jpg';
 
   </script>
 </body>
