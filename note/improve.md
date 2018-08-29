@@ -46,7 +46,7 @@
 	
 1. 热卖中//img.cnhash.com/4e1c88f8-2c60-44ef-8398-51c5196e8542.svg
 2. 售罄 //img.cnhash.com/0ae87306-fe5e-49d8-8694-80c240a50bb8.svg
-
+1. 预售 //img.cnhash.com/3f204be9-9765-4940-bc1e-cbae3f16524e.svg
 
 
 
