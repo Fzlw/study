@@ -4,6 +4,13 @@ let reg = /<.*>/;
 reg = /<.*?>/;
 // console.log(str.match(reg));
 
+// 选择数字
+
+let rNum = /\d+/g; 
+let str1 = 'banktest978675643265342452453453';
+
+console.log(str1.match(/\d+/g));
+  
 // 首字母转大写
 // let str1 = 'ewrt_re_oerd';
 // let name = str1.split('_')

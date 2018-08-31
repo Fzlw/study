@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img id="img" src="" alt="">
+
+    <script>
+        let i = document.getElementById('img')
+        let canvas = document.createElement('canvas');
+        let ctx = canvas.getContext('2d');
+        let img = new Image();
+        img.crossOrigin = '*'
+        img.src = 'http://img.zcool.cn/community/0117e2571b8b246ac72538120dd8a4.jpg@1280w_1l_2o_100sh.jpg';
+        img.onload = () => {
+            console.log('ok');
+            canvas.width = 100
+            canvas.height = 100
+
+            ctx.drawImage(img, 0 ,0, 200, 200);
+            let base = canvas.toDataURL()
+            i.src = base
+            document.body.appendChild(canvas)
+            // document.body.appendChild(img);
+        }
+    </script>
+</body>
+</html>
