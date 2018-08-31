@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            showName() {
+                console.log(this.name);
+            }
+        }
+
+        class liwei extends Person {
+            constructor(name, age, sex) {
+                super(name, age)
+                this.sex = sex;
+            }
+            showSex() {
+                console.log(this.sex)
+            }
+            showAll() {
+                this.showName();
+                this.showSex()
+            }
+        }
+
+        let l = new liwei('liwei', 14, 'nan');
+        l.showAll()
+    </script>
+</body>
+</html>

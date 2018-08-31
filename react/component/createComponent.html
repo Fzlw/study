@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>react</title>
+</head>
+<body>
+
+<div id="container"></div>
+<div id="box1"></div>
+<div id="box2"></div>
+<div id="box3"></div>
+
+
+<script type="text/javascript" src="../js/react.js"></script>
+<script type="text/javascript" src="../js/react-dom.js"></script>
+<script type="text/javascript" src="../js/babel.min.js"></script>
+<script src="../js/jquery-1.8.3.min.js"></script>
+
+<script type="text/babel">
+    // 工厂化
+    function MyCon1() {
+        return <h1>工厂化</h1>
+    }
+    ReactDOM.render(<MyCon1 />, $('#box1')[0]);
+
+    // es6class化
+    class MyCon2 extends React.Component {
+        render() {  
+          return <h1>es6实例对象化</h1>
+        }
+    }
+    ReactDOM.render(<MyCon2 />, $('#box2')[0]);
+
+
+    // 老方法
+    let MyCon3 = React.createClass({
+        render: function() {
+          return <h1>老方法了</h1>
+        }
+    })
+    ReactDOM.render(<MyCon3 />, $('#box3')[0]);
+</script>
+
+
+</body>
+</html>

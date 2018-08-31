@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box1"></div>
+  <div id="box2"></div>
+
+  <script src="../js/react.js"></script>
+  <script src="../js/react-dom.js"></script>
+  <script src="../js/babel.min.js"></script>
+
+  <script type="text/babel">
+      let example = React.createElement('h1', {id: 'ex1'}, 'react创建的dom');
+      ReactDOM.render(example, document.getElementById('box1'));
+
+      let ex2 = <h1>jsx创建的dom</h1>;
+      ReactDOM.render(ex2, document.getElementById('box2'));
+  </script>
+</body>
+</html>

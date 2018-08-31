@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>A</li>
+			<li>B</li>
+			<li>C</li>
+		</ul>
+		<hr />
+		<div id="box"></div>
+		
+		<script type="text/javascript" src="../js/react.js"></script>
+		<script type="text/javascript" src="../js/react-dom.js"></script>
+		<script type="text/javascript" src="../js/babel.min.js"></script>
+		<script type="text/babel">
+			const names = [ 'liwei', 'ye', 'qiong' ];
+			// react自动遍历了一次
+			ReactDOM.render(
+				<ul>
+					<li>{names}</li> 
+					{ names.map((item, index) => {
+              return <li key={index}>{item}</li>
+          }) }
+				</ul>,
+				document.getElementById('box')
+			)
+		</script>
+	</body>
+</html>
