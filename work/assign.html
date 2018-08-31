@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="jquery-1.8.3.min.js"></script>
+  <script src="assign.js"></script>
 </head>
-<script src="jquery-1.8.3.min.js"></script>
-<script src="assign.js"></script>
+
 <body>
-    <input type="text">
-    <button>确定</button>
-    <script>
-        let i = $('input');
-        $('button').click(() => {
-            let result = assign(i, 1);
-            console.log(result)
-            window.resizeTo(200, 200);
-            window.open('www.baidu.com')
+  <input type="text">
+  <div>确定</div>
+  <script>
+    let load = () => {
+      console.log(1234)
+      $(function () {
+        console.log('ok')
+      })
+    }
+
+    let i = $('input');
+    $('div').click(() => {
+      let result = assign(i, 1);
+      console.log(result)
+      // window.resizeTo(200, 200);
+      // window.open('www.baidu.com')
 
 
-            let str = $('input').val();
-            console.log(str.trim());
-        });
+      let str = $('input').val();
+      console.log(str.trim());
 
-        // 选中不存在元素会被$对象包裹一层，判断为true
-        // console.log(document.getElementsByTagName('div'))
-        // console.log(Boolean(document.getElementsByTagName('div')))
-        // console.log($('div'));
-        // console.log(Boolean($('div')));
-    </script>
+      load()
+    });
+
+    // 选中不存在元素会被$对象包裹一层，判断为true
+    // console.log(document.getElementsByTagName('div'))
+    // console.log(Boolean(document.getElementsByTagName('div')))
+    // console.log($('div'));
+    // console.log(Boolean($('div')));
+  </script>
 </body>
-  
-</body>
+
+
 </html>

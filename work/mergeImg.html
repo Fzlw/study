@@ -7,48 +7,120 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script src="./zepto-1.2.0.js"></script>
+  <style> 
+    img {
+        display: block;
+    }
+  </style>
 </head>
 
 <body>
-  <img class="img1" src="images/1.jpg" alt="">
-  <!-- <img class="img2" src="images/2.jpg" alt=""> -->
   <canvas id="canvas"></canvas>
-  <button>添加</button>
 
-  <!-- https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535543534257&di=4a6c35d1bb79fb11cabd0f69f5a121c4&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F5%2F57f9f8ab1816a.jpg -->
   <script>
-    function convertImageToCanvas(image, img) {
-      var canvas = document.createElement("canvas");
-      canvas.width = image.width;
-      canvas.height = image.height;
-      canvas.getContext("2d").drawImage(image, 0, 0);
-      canvas.getContext("2d").drawImage(img, 10, 10);
+    let canvas = document.getElementById('canvas')
+    let ctx = canvas.getContext('2d')
 
-      return canvas;
+    let img1 = new Image();
+    // img1.crossOrigin = '*'
+
+    img1.onload = () => {
+        canvas.width = img1.width
+        canvas.height = img1.height
+        ctx.drawImage(img1, 0 , 0, canvas.width, canvas.height);
+        canvas.style.width = '26.7%'
+
+        // document.body.appendChild(canvas);
+        // document.body.appendChild(img1);
     }
-
-    function convertCanvasToImage(canvas) {
-      var image = new Image();
-      image.setAttribute("crossOrigin", 'Anonymous')
-      image.src = canvas.toDataURL("image/png");
-      document.body.appendChild(image);
-      return image;
-    }
+    img1.src = 'https://img.cnhash.com/adfeb027-c502-46ff-999b-2484be5d7119.png';
 
 
-    // let canvas = document.getElementById("canvas"); //获取canvas
-    // let ctx = canvas.getContext("2d"); //对应的CanvasRenderingContext2D对象(画笔)
-    // let img = new Image(); //创建新的图片对象
-    // let base64 = ''; //base64 
-    // img.Origin = '*'
 
-    // img.onload = function () { //图片加载完，再draw 和 toDataURL
-    //   img.Origin = '*'
-    //   ctx.drawImage(img, 0, 0);
-    //   base64 = canvas.toDataURL();
-    //   // console.log(base64)
-    // };
-    // img.src = './images/1.jpg';
+    // setTimeout(function () {
+    //   let test = document.getElementById('test');
+      
+    //   ctx.drawImage(test, 0, 0, 200, 200);
+    //   // test.crossOrigin = '*'
+    //   canvas.toDataURL()
+    //   image.setAttribute('crossOrigin', 'anonymous');
+    //   document.body.appendChild(canvas);
+    // }, 2000)
+
+
+    $('img').click(function() {
+        console.log($(this).width(288))
+    })
+
+
+clickDownloadImg(url) {
+                const imgContainer = $('.Qr-code .code-backgroude');
+                const host = this.box.attr('data-url');
+
+                const bg = `${host}/img/bg.png`
+                let imgArr = [bg, url]
+
+
+                let promiseImg = url => {
+                    return new Promise((resolve, reject) => {
+                        let img = new Image();
+                        img.onload = () => resolve(img);
+                        img.onerror = reject;
+                        img.src = url;
+                    })
+                }
+
+                let canvasToImg = canvas => {
+                    let img = new Image();
+                    let base = canvas.toDataURL();
+                    img.src = base;
+                    return img;
+                }
+
+                let target = [],
+                    imgs = [];
+                imgArr.forEach(item => {
+                    let p = promiseImg(item)
+                        .then(img => imgs.push(img))
+                        .catch(err => console.log(err));
+                    target.push(p);
+                })
+                Promise.all(target).then(res => {
+                    let canvas = document.createElement('canvas');
+                    let ctx = canvas.getContext('2d');
+                    if (imgs[0].src.indexOf(bg) === -1) {
+                        imgs.reverse();
+                    }
+                    canvas.width = imgs[0].width;
+                    canvas.height = imgs[0].height;
+
+                    ctx.drawImage(imgs[0], 0, 0, canvas.width, canvas.height);
+                    ctx.drawImage(imgs[1], (canvas.width - imgs[1].width) / 2, 2340);
+                    canvas.style.width = `${(288 * 100) / canvas.width}%`;
+
+                    const base64 = canvas.toDataURL('image/png');
+                    imgContainer.find('img')[0].src = base64;
+
+                    let iii = canvasToImg(canvas);
+                    imgContainer.siblings('.download')[0].href = base64
+                    imgContainer.siblings('.download')[0].click()
+
+                    // 点击下载图片
+                    // imgContainer.siblings('.download').click(function () {
+                    //     let src = imgContainer.find('img').attr("src");
+                    //     var alink = document.createElement("a");
+                    //     alink.href = src;
+                    //     alink.download = 'wewe.png';
+                    //     alink.click();
+                    // })
+                })
+
+
+            }
+
+
+
+
 
   </script>
 </body>
