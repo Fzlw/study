@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>react</title>
+</head>
+<body>
+
+<div id="container"></div>
+<div id="box1"></div>
+<hr/>
+<div id="box2"></div>
+
+<script type="text/javascript" src="../js/react.js"></script>
+<script type="text/javascript" src="../js/react-dom.js"></script>
+<script src="../js/prop-types.js"></script>
+<script type="text/javascript" src="../js/babel.min.js"></script>
+
+<script type="text/babel">
+    class Animal extends React.Component {
+        render() {
+            console.log(this)
+            return (
+              <ul>
+                <li>{this.props.name}</li>
+                <li>{this.props.color}</li>
+                <li>{this.props.price}</li>
+              </ul>
+            )
+        }
+    }
+
+    // 设置默认值
+    Animal.defaultProps = {
+        name: 'unknow',
+        color: 'unknow',
+        price: 5
+    }
+    // 设置默认类型
+    Animal.propTypes = {
+        name: PropTypes.string.isRequired,
+        color: PropTypes.string.isRequired,
+        age: PropTypes.number
+    }
+
+
+    const cat = { name: 'cat', color: 'black', price: 10 }
+    ReactDOM.render(<Animal name={cat.name} color={cat.color} price={cat.price} />, document.getElementById('box1'));
+
+    const dog = { name: 'dog', color: 'blackwhite', price: 30 }
+    ReactDOM.render(<Animal name={dog.name} color={dog.color} />, document.getElementById('box2'));
+    
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>react</title>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script type="text/javascript" src="../js/react.js"></script>
+<script type="text/javascript" src="../js/react-dom.js"></script>
+<script type="text/javascript" src="../js/babel.min.js"></script>
+
+<script type="text/babel">
+    class App extends React.Component {
+        render() {
+            const {arr} = this.props;
+            return (
+                <div>
+                  { arr.map((e, i) => {
+                      return <My1 key={i} name={e} />
+                  }) }
+                </div>
+            )
+        }
+    }
+
+// 工厂函数形式
+// 组件命名必须以首字母大写形式
+// 父组件以回掉参数形式将数据传入  json
+    function My1(props) {
+        console.log(props)
+        return <h1>{props.name}</h1>
+    }
+    let arr = ['liwei', 'yeyeye', 'haha']
+    ReactDOM.render(<App arr={arr} />, document.getElementById('container'));
+</script>
+
+
+</body>
+</html>
