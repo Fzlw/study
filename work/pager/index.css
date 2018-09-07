@@ -1,0 +1,19 @@
+.con {
+    display: flex;
+
+}
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+li {
+    width: 20px;
+    height: 20px;
+    background-color: #9696da;
+    text-align: center;
+}
+.active {
+  color: red;
+}
