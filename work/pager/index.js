@@ -18,15 +18,24 @@
 
 class Pager {
   constructor(sum = 10, maxlength = 3) {
-    this.active = 1;
+    this.scope = {
+       sum,
+       max: maxlength
+    }
+
+    this.active = 7;
     this.isAdd = false;
+    this.isCut = true;
     this.Arr = [];
 
     this.init(sum, maxlength);
-    this.render();
+    
+    // this.click()
   }
 
-  init(sum, max) {
+  init() {
+    const { sum, max } = this.scope;
+
     let i;
     // 总数小于最大显示数目
     if (this.active + max >= sum) {
@@ -37,24 +46,46 @@ class Pager {
           this.Arr[i] = i + 1
         }
       }
+      // this.render()
       return;
     }
 
     // 总数  大于 最大显示数目
-    for (i = 0; i < this.active + max; i++) {
+    for (i = 0; i < sum; i++) {
       if (i === this.active - 1) {
         this.Arr[i] = (i + 1).toString()
       } else {
         this.Arr[i] = i + 1
       }
     }
-    this.Arr.splice(this.active + max - 1, sum - max, '...', sum);
+    // this.Arr.splice(this.active + max - 1, sum - max, '...', sum);
+
+    let newarr = [this.Arr[0]]
+   
+    if (this.active - max >= 0) {
+        newarr.push('...')
+    }
+
+    if (this.active + max - 1 < sum) {
+        for (let j = 0; j < max; j++) {
+            newarr.push(this.Arr[this.active - 1 + j])
+        }
+        console.log(6353456)
+    }
+    
+    newarr.push('...', this.Arr[this.Arr.length - 1])
+    console.log(this.Arr)
+    console.log(newarr)
 
 
+    // console.log(this.active)
+    // console.log(this.Arr)
+
+
+    // this.render();
   }
 
   render() {
-    console.log(this.Arr)
     const ul = $('.ul');
     let aLi = '';
     this.Arr.forEach(item => {
@@ -65,7 +96,19 @@ class Pager {
   }
 
   click() {
+      $('.con').on('click', (e) => {
+          if (e.target.nodeName !== 'SPAN') return;
+          const step = 1;
+          this.isAdd = false;
+          if (e.target.className === 'up') {
+              step *= -1;
+              this.isAdd = true;
+          }
 
+          this.active += step;
+
+          this.init();
+      })
   }
 
   changeArr() {
