@@ -19,26 +19,29 @@
 class Pager {
   constructor(sum = 10, maxlength = 3) {
     this.scope = {
-       sum,
-       max: maxlength
+      sum,
+      max: maxlength
     }
 
-    this.active = 7;
+    this.active = 5;
     this.isAdd = false;
     this.isCut = true;
     this.Arr = [];
 
     this.init(sum, maxlength);
-    
-    // this.click()
+
+    this.click()
   }
 
   init() {
-    const { sum, max } = this.scope;
+    const {
+      sum,
+      max
+    } = this.scope;
 
     let i;
     // 总数小于最大显示数目
-    if (this.active + max >= sum) {
+    if (max + 1 >= sum) {
       for (i = 0; i < sum; i++) {
         if (i === this.active - 1) {
           this.Arr[i] = (i + 1).toString()
@@ -52,67 +55,106 @@ class Pager {
 
     // 总数  大于 最大显示数目
     for (i = 0; i < sum; i++) {
-      if (i === this.active - 1) {
-        this.Arr[i] = (i + 1).toString()
-      } else {
         this.Arr[i] = i + 1
-      }
     }
     // this.Arr.splice(this.active + max - 1, sum - max, '...', sum);
 
-    let newarr = [this.Arr[0]]
-   
-    if (this.active - max >= 0) {
-        newarr.push('...')
+
+    // 是否在第一页
+    if (this.active === 1) {
+        this.newarr = []
+    } else {
+        this.newarr = [1]
     }
 
-    if (this.active + max - 1 < sum) {
-        for (let j = 0; j < max; j++) {
-            newarr.push(this.Arr[this.active - 1 + j])
+    for (let j = 0; j < max; j++) {
+        if (this.active + j < sum) {
+            this.newarr.push(this.active + j)
+        } else {
+            this.newarr.push(this.active + j - max)
         }
-        console.log(6353456)
     }
-    
-    newarr.push('...', this.Arr[this.Arr.length - 1])
-    console.log(this.Arr)
-    console.log(newarr)
+    this.newarr.push(this.Arr[this.Arr.length - 1])
+    this.newarr.sort((a, b) => a - b)
+
+    if (this.newarr[1] - 1 > 1) {
+        this.newarr.splice(1, 0, '...')
+    }
+    if (this.newarr[this.newarr.length - 2] + 1 < sum) {
+        this.newarr.splice(this.newarr.length - 1, 0, '...')
+    }
+
+    // 添加激活状态
+    const index = this.newarr.indexOf(this.active)
+    this.newarr[index] = this.newarr[index].toString()
+
+    // console.log(this.Arr)
+    // console.log(this.newarr)
 
 
     // console.log(this.active)
     // console.log(this.Arr)
 
 
-    // this.render();
+    this.render();
   }
 
   render() {
+    console.log(this.newarr)
     const ul = $('.ul');
     let aLi = '';
-    this.Arr.forEach(item => {
-        aLi += `<li class="${ typeof item === 'string' && !isNaN(Number(item)) ? 'active' : '' }">${item}</li>`;
+    this.newarr.forEach(item => {
+      aLi += `<li class="${ typeof item === 'string' && !isNaN(Number(item)) ? 'active' : '' }">${item}</li>`;
     })
 
     ul.html(aLi);
   }
 
   click() {
-      $('.con').on('click', (e) => {
-          if (e.target.nodeName !== 'SPAN') return;
-          const step = 1;
-          this.isAdd = false;
-          if (e.target.className === 'up') {
-              step *= -1;
-              this.isAdd = true;
-          }
+    $('.con').on('click', (e) => {
+      if (e.target.nodeName !== 'SPAN') return;
+      let step = 1;
+      this.isAdd = false;
+      if (e.target.className === 'up') {
+        step *= -1;
+        this.isAdd = true;
+      }
 
-          this.active += step;
 
-          this.init();
-      })
+      
+      this.changeArr(step)
+      console.log(this.active)
+
+      
+    })
   }
 
-  changeArr() {
+  changeArr(step) {
+      const activeIndex = this.newarr.indexOf(this.active.toString());
+      const index = this.newarr.indexOf('...', activeIndex);
 
+      if (index !== -1 && index - activeIndex > 1) {
+          this.newarr[activeIndex] = Number(this.newarr[activeIndex])
+          this.active = this.newarr[activeIndex + 1]
+          this.newarr[activeIndex + 1] = this.newarr[activeIndex + 1].toString()
+          
+          this.render();
+          return;
+      } 
+      
+      // 限制this.active
+      if (this.active + step > this.scope.sum) {
+          this.active = this.scope.sum
+      } else if (this.active + step < 1) {
+          this.active = 1
+      } else {
+          this.active += step
+      }
+      
+      this.init()
+      
+      // console.log(index, activeIndex)
+      // console.log(this.active.toString())
   }
 }
 
