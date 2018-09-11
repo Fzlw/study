@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../zepto-1.2.0.js"></script>
+  <style>
+    body {
+        margin: 0;
+        padding: 0
+    }
+      .box {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          position: absolute;
+      }
+      p {
+          width: 1px;
+          height: 300px;
+          background-color: blue;
+          position: absolute;
+          left: 196px;
+          top: 0;
+          margin: 0;
+      }
+  </style>
+</head>
+<body>
+  <input type="text">
+  <div class="box"></div>
+  <p></p>
+
+
+  <script>
+      const obj = $('.box');
+
+      function move(obj, target) {
+          let speed = 0, left = 0;
+          let timer = () => {
+              setTimeout(() => {
+                  speed += (target - obj.offset().left) / 8;
+                  speed *= 0.7
+                  left += speed;
+                  if (Math.abs(left - target) > 1) {
+                      timer()
+                      obj.css('left', left)
+                  } else {
+                    obj.css('left', target)
+                  }
+              }, 30)
+          }
+          timer()
+      }
+
+
+      move(obj, 196)
+
+  </script>
+</body>
+</html>
