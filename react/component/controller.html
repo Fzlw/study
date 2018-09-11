@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>react</title>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script type="text/javascript" src="../js/react.js"></script>
+<script type="text/javascript" src="../js/react-dom.js"></script>
+<script type="text/javascript" src="../js/babel.min.js"></script>
+
+<script type="text/babel">
+    class App extends React.Component {
+      constructor(props) {
+          super(props)
+          this.state = {
+              msg: 'qwer'
+          }
+
+          this.change = this.change.bind(this)
+      }
+
+        render() {
+            const {msg} = this.state
+            return (
+                <div>
+                    <input onChange={this.change} type="text" value={msg} />
+                    <p>{msg}</p>
+                </div>
+            )
+        }
+
+        change(e) {
+            const  v = e.target.value
+            this.setState({
+                msg: v
+            })
+        }
+    }
+
+    ReactDOM.render(<App />, document.getElementById('container'))
+</script>
+
+
+</body>
+</html>

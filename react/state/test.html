@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>react</title>
+</head>
+
+<body>
+
+  <div id="container"></div>
+
+  <script type="text/javascript" src="../js/react.js"></script>
+  <script type="text/javascript" src="../js/react-dom.js"></script>
+  <script type="text/javascript" src="../js/babel.min.js"></script>
+
+  <script type="text/babel">
+
+  // 组件外部向组件内部传值通过主组件的函数
+    class App extends React.Component {
+
+        constructor(props) {
+            super(props);
+            // 区别props 和state ,props为外部传入数据
+            this.state = {
+                list: ['吃饭', 's水电费', 'efgv', '额头润滑剂']
+            }
+             
+            // 绑定add的this
+            this.add = this.add.bind(this)
+        }
+
+        render() {
+          // 主组件通过属性向子组件传值
+            return (
+                <div>
+                  <h1>嵌套组件</h1>
+                  <AddList add={this.add} length={this.state.list.length}/>
+                  <TodoList list={this.state.list} />
+                </div>
+            )
+        }
+
+        add(value) {
+          let list = this.state.list;
+          // unshift()  返回数组的长度
+          list.unshift(value)
+            this.setState({
+                list
+            })
+        }
+
+    }
+
+    class AddList extends React.Component {
+        constructor(props) {
+            super(props)
+            this.getValue = this.getValue.bind(this);
+        }
+        render() {
+            return (
+              <div>
+                  <input ref="msg" type="text" />
+                  <button onClick={this.getValue}>添加#{this.props.length}</button>
+              </div>
+            )
+        }
+        
+        getValue() {
+            let value = this.refs.msg.value
+            // 调用传入的add函数
+            this.props.add(value);
+
+            this.refs.msg.value = '';
+        }
+
+    }
+
+    class TodoList extends React.Component {
+        render() {
+          let {list} = this.props;
+            return (
+                <ul>
+                    {list.map((item, index) => {// foreach居然不行
+                        return <li key={index}>{item}</li>
+                    })}
+                </ul>
+            )
+        }
+    }
+
+    ReactDOM.render(<App />, document.getElementById('container'));
+</script>
+
+
+</body>
+
+</html>

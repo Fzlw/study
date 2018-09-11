@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>react</title>
+</head>
+
+<body>
+
+  <div id="container"></div>
+
+  <script type="text/javascript" src="../js/react.js"></script>
+  <script type="text/javascript" src="../js/react-dom.js"></script>
+  <script type="text/javascript" src="../js/babel.min.js"></script>
+
+  <script type="text/babel">
+    class Life extends React.Component {
+        constructor(props) {
+            super(props)
+
+            this.state = {
+                person: {
+                    name: 'lkjh',
+                    age: 200
+                }
+            }
+        }
+        render() {
+            console.log('render()  渲染')
+            const { person } = this.state
+            return (
+                <p>{person.name} ===== {person.age}</p>
+            )
+        }
+
+        // 将要被挂载
+        componentWillMount() {
+            console.log('componentWillMount()  将要被挂载')
+
+            setTimeout(() => {
+                this.setState({
+                  person: {
+                    name: 'adcasdc',
+                    age: 100
+                }
+                })
+            }, 2000)
+
+            setTimeout(() => {
+                ReactDOM.unmountComponentAtNode(document.getElementById('container'))
+            }, 4000)
+        }
+
+        // 已经被挂载
+        componentDidMount() {
+          console.log('componentDidMouunt()  已经被挂载')
+        }
+
+// 当this.state改变时调用
+        // 将要更新
+        componentWillUpdate() {
+          console.log('componentWillUpdate()  将要更新')
+        }
+
+        // 已经更新
+        componentDidUpdate() {
+          console.log('componentDidUpdate()  已经更新')
+        }
+
+        // 将要卸载
+        componentWillUnmount() {
+          console.log('componentWillUnmount()  将要卸载')
+        }
+
+    }
+
+    ReactDOM.render(<Life />, document.getElementById('container'))
+</script>
+
+
+</body>
+
+</html>

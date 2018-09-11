@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>react</title>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script type="text/javascript" src="../js/react.js"></script>
+<script type="text/javascript" src="../js/react-dom.js"></script>
+<script type="text/javascript" src="../js/babel.min.js"></script>
+
+<script type="text/babel">
+    class App extends React.Component {
+        constructor(props) {
+            super(props);
+            // react让实例方法指向组件实例对象
+            // 原型上的方法指向null
+            this.alert = this.alert.bind(this)  // 在实例上添加一个alert方法  ，原型上也有
+        }
+
+        render() {
+            return (
+              <div>
+                  <input ref="msg" type="text" />
+                  <button onClick={this.alert}>提示输入数据</button>
+                  <input ref="target" onBlur={this.blur} type="text" placeholder="目标" />
+              </div>
+            )
+        }
+
+        alert() {
+            let value = this.refs.msg.value
+            alert(value) 
+
+            this.refs.target.value = value;
+            this.refs.msg.value = '';
+        }
+
+        blur(e) {
+            console.log(e.target) // 通过事件回调可以拿到原生dom对象
+        }
+    }
+
+    ReactDOM.render(<App />, document.getElementById('container'))
+</script>
+
+
+</body>
+</html>

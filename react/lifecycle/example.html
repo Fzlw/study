@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>react</title>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script type="text/javascript" src="../js/react.js"></script>
+<script type="text/javascript" src="../js/react-dom.js"></script>
+<script type="text/javascript" src="../js/babel.min.js"></script>
+
+<script type="text/babel">
+    class App extends React.Component {
+        constructor(props) {
+            super(props)
+            this.state = {
+                url: '345yrthfgnbdsewqr3tyrtjgfh',
+                opacity: 1
+            }
+        }
+
+        render() {
+            const { url, opacity } = this.state
+            return (
+              <span style={{opacity}}>{url}</span>
+            )
+        }
+
+        // 挂载完毕
+        componentDidMount() {
+            let {opacity} = this.state
+            setInterval(() => {
+                opacity -= 0.05
+                if (opacity < 0.1) {
+                    opacity = 1;
+                }
+
+                this.setState({opacity})
+            }, 100);
+        }
+    }
+
+    ReactDOM.render(<App />, document.getElementById('container'))
+</script>
+
+
+</body>
+</html>

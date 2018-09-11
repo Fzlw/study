@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>react</title>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script type="text/javascript" src="../js/react.js"></script>
+<script type="text/javascript" src="../js/react-dom.js"></script>
+<script type="text/javascript" src="../js/babel.min.js"></script>
+
+<script type="text/babel">
+    class App extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                isLike: true
+            }
+
+            // 改变this
+            this.change = this.change.bind(this);
+        }
+
+        render() {
+            let {isLike} = this.state;
+
+            let msg = isLike ? '天是蓝色的' : '蓝色的天';
+            return (
+              <h1 onClick={this.change}>
+                {msg}
+              </h1>
+            )
+        }
+
+        change() {
+            this.setState({
+                isLike: !this.state.isLike
+            })
+        }
+
+    }
+
+    ReactDOM.render(<App />, document.getElementById('container'));
+</script>
+
+
+</body>
+</html>
