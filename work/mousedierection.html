@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./zepto-1.2.0.js"></script>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+
+    <script>
+        $('.box1').on('mousemove', (e) => {
+            // console.log(e)
+            const position = $('.box1').offset()
+            console.log(e.clientX - position.left, e.clientY - position.top)
+        })
+        // $(document).mousemove((e) => {
+        //     console.log(e.clientX, e.clientY)
+        // })
+    </script>
+</body>
+</html>
