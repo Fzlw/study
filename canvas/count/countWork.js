@@ -8,12 +8,12 @@ class Count {
 
     this.init();
   }
-
+// 内圆 R = 106
   init() {
     this.cW = 300;
     this.cH = 300;
     // 线宽
-    this.lineW = 10;
+    this.lineW = 6;
     // 字体大小
     this.fontSize = 35;
     // 圆起始角度
@@ -90,7 +90,7 @@ class Count {
     let timeout = () => {
       setTimeout(() => {
         this.render();
-        start = 1;
+        start = 1000;
         timeout();
       }, start);
     }
