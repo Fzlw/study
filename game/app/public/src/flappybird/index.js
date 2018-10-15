@@ -9,6 +9,8 @@ class Game {
     init() {
         // 存放静态资源
         this.R = {};
+        // 帧编号
+        this.fNo = 0;
         this.fitScreen()
         this.load();
     }
@@ -21,7 +23,6 @@ class Game {
         width = width < 320 ? 320 : width;
         height = height > 736 ? 736 : height;
         height = height < 500 ? 500 : height;
-
 
         this.canvas.width = width;
         this.canvas.height = height;
@@ -43,8 +44,7 @@ class Game {
     loadResource(json) {
         let {
             baseUrl,
-            images,
-            js
+            images
         } = JSON.parse(json),
             count = 0,
             len = images.length;
@@ -66,11 +66,26 @@ class Game {
 
     // 游戏开始
     start() {
-        let back = new BackGround(this.ctx, this.R, this.getData());
+        // 获取常量
+        const data = this.getData();
+        // 实例化背景
+        let back = new BackGround(this.ctx, this.R, data);
+        // 实例化大地
+        let land = new Land(this.ctx, this.R, data);
+        // 实例化管子
+        let pipe = new Pipe(this.ctx, this.R, data);
         setInterval(() => {
             // 清屏
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            // 更新背景
             back.update();
+            // 渲染管子
+            if (this.fNo % 20 === 0) {
+                pipe.create();
+            }
+            // 更新大地
+            land.update()
+            this.fNo ++;
         }, 20);
     }
 
@@ -82,7 +97,8 @@ class Game {
             WIDTH: this.canvas.width,    // 屏幕宽度
             HEIGHT: this.canvas.height,   // 屏幕高度
             bcakSpeed: 1,  // 背景移动速度
-            landSpeed: 3   // 大地移动速度
+            landSpeed: 3,   // 大地移动速度
+            entranceWidth: 200    // 管子入口宽
         }
     }
 }

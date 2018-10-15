@@ -20,6 +20,9 @@
     </style>
 
     <script src="../../public/src/flappybird/background.js"></script>
+    <script src="../../public/src/flappybird/land.js"></script>
+    <script src="../../public/src/flappybird/pipe.js"></script>
+    <script src="../../public/src/flappybird/bird.js"></script>
 </head>
 <body>
     {{! canvas手机端满屏,meta标签声明移动端，给canvas为block，body宽高给100%，给overflow }}
