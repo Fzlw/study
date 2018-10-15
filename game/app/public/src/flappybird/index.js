@@ -1,4 +1,6 @@
-
+/**
+ * 管子缺少一帧没有绘制  TODO
+ */
 class Game {
     constructor(canvas) {
         this.canvas = canvas;
@@ -66,6 +68,8 @@ class Game {
 
     // 游戏开始
     start() {
+        // 存储管子的数组
+        let pipeArr = [];
         // 获取常量
         const data = this.getData();
         // 实例化背景
@@ -73,20 +77,31 @@ class Game {
         // 实例化大地
         let land = new Land(this.ctx, this.R, data);
         // 实例化管子
-        let pipe = new Pipe(this.ctx, this.R, data);
+        // let pipe = new Pipe(this.ctx, this.R, data);
         setInterval(() => {
             // 清屏
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
             // 更新背景
             back.update();
-            // 渲染管子
-            if (this.fNo % 20 === 0) {
-                pipe.create();
+            // 限制管子的出现频率
+            if (this.fNo % 50 === 0) {
+                new Pipe(this.ctx, this.R, data, pipeArr);
             }
+            // 渲染管子
+            if (pipeArr.length !== 0) {
+                pipeArr.forEach(pipe => {
+                    pipe.update();
+                })
+            }
+            console.log(pipeArr.length)
             // 更新大地
             land.update()
+
+            // fNo
+            this.ctx.fillStyle = "black";
+            this.ctx.fillText(this.fNo, 0, 10);
             this.fNo ++;
-        }, 20);
+        }, 200);
     }
 
     // 常量
