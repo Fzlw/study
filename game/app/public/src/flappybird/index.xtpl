@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FlappyBird</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        #canvas {
+            display: block;
+            border: 1px solid black;
+        }
+    </style>
+
+    <script src="../../public/src/flappybird/background.js"></script>
+</head>
+<body>
+    {{! canvas手机端满屏,meta标签声明移动端，给canvas为block，body宽高给100%，给overflow }}
+    <canvas id="canvas"></canvas>
+
+    <script src="../../public/src/flappybird/index.js"></script>
+</body>
+</html>

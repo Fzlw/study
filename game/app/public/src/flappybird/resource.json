@@ -1,0 +1,9 @@
+{
+    "baseUrl": "../../public/src/",
+    "images": [
+        {"name": "allImg", "url": "flappybird/resource/f_b.png"}
+    ],
+    "js": [
+        {"name": "BackGround", "url": "flappybird/resource/background.js"}
+    ]
+}
