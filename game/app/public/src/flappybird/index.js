@@ -93,7 +93,6 @@ class Game {
                     pipe.update();
                 })
             }
-            console.log(pipeArr.length)
             // 更新大地
             land.update()
 
@@ -101,7 +100,7 @@ class Game {
             this.ctx.fillStyle = "black";
             this.ctx.fillText(this.fNo, 0, 10);
             this.fNo ++;
-        }, 200);
+        }, 20);
     }
 
     // 常量
