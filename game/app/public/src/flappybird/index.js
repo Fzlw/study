@@ -1,5 +1,8 @@
 /**
- * 管子缺少一帧没有绘制  TODO
+ * 管子缺少一帧没有绘制  
+ * 因为数组长度的突然变化导致的
+ * 
+ * 做小鸟的动画   TODO
  */
 class Game {
     constructor(canvas) {
@@ -60,7 +63,8 @@ class Game {
                 this.ctx.fillStyle = "black"
                 this.ctx.fillText("123456", 0, 10);
                 if (count === len) {
-                    this.start();
+                    // this.start();
+                    this.test()
                 }
             }
             img.src = baseUrl + item.url;
@@ -84,34 +88,34 @@ class Game {
         setInterval(() => {
             // // 清屏
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-            // // 更新背景
-            // back.update();
-            // // 限制管子的出现频率
-            // if (this.fNo % 50 === 0) {
-            //     new Pipe(this.ctx, this.R, data, pipeArr);
-            // }
-            // // 渲染管子
-            // if (pipeArr.length !== 0) {
-            //     pipeArr.forEach(pipe => {
-            //         pipe.update();
-            //     })
-            // }
-            // // 更新大地
+            // 更新背景
+            back.update();
+            // 限制管子的出现频率
+            if (this.fNo % 50 === 0) {
+                new Pipe(this.ctx, this.R, data, pipeArr);
+            }
+            // 渲染管子
+            if (pipeArr.length !== 0) {
+                pipeArr.forEach(pipe => {
+                    pipe.update();
+                })
+            }
+            // 更新大地
             let labdY = land.update();
             // 更新小鸟
             this.bird.update(labdY);
 
             // fNo
-            // this.ctx.fillStyle = "black";
-            // this.ctx.fillText(this.fNo, 0, 10);
-            // this.fNo ++;
+            this.ctx.fillStyle = "black";
+            this.ctx.fillText(this.fNo, 0, 10);
+            this.fNo ++;
         }, data.renderTime * 1000);
     }
 
     // 常量
     getData() {
         return {
-            G: 1,    // 下落加速度
+            G: 0.2,    // 每帧小鸟的Y坐标变化量（下落加速度）
             SLICE: 0.618,    // 屏幕分隔比例
             WIDTH: this.canvas.width,    // 屏幕宽度
             HEIGHT: this.canvas.height,   // 屏幕高度
@@ -125,9 +129,20 @@ class Game {
     // 点击事件
     bindEvent() {
         this.canvas.onclick = () => {
-          console.log(234)
           this.bird.fly();
         };
+    }
+
+    // 测试各种情况
+    test() {
+        this.ctx.strokeStyle = "red"
+        this.ctx.strokeRect(50, 50, 100, 300)
+        this.ctx.save()
+        this.ctx.translate(25, 25);
+        this.ctx.rotate(Math.PI/6);
+        this.ctx.fillStyle = "yellow"
+        this.ctx.fillRect(50, 50, 100, 300);
+        this.ctx.restore();
     }
 }
 

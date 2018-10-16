@@ -42,7 +42,7 @@ class Pipe {
 
     update() {
         this.startX = this.startX - this.pipeSpeed;
-        // 如果消失就清楚，突变的那一帧会缺失，所以消失一段距离后在删除 * 4
+        // 如果消失就清除，突变的那一帧会缺失，所以消失一段距离后在删除 * 4
         if (this.startX <= - 4 * this.upPipe.size[0]) {
             this.pipeArr.shift();
             return;
