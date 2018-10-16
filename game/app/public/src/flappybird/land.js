@@ -19,12 +19,13 @@ class Land {
     // 大地猫腻
     this.ctx.fillStyle = "#ded895";
     this.ctx.fillRect(0, posiY + bH, this.DATA.WIDTH, this.DATA.HEIGHT - posiY - bH)
+    return bH - lH + posiY;
   }
 
   update() {
     this.lS = this.lS - this.DATA.landSpeed;
     this.lS = Math.abs(this.lS) >= 336 ? 0 : this.lS; // 大地速度限制
 
-    this.render();
+    return this.render();
   }
 }

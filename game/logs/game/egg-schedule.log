@@ -18,3 +18,9 @@
 2018-10-15 17:06:05,189 INFO 5922 [Timer] /Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/app/schedule/rotate_by_file.js next time will execute at 2018-10-16 00:00:01.000
 2018-10-15 17:14:19,894 INFO 6119 [Timer] /Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/app/schedule/clean_log.js next time will execute at 2018-10-16 00:00:00.000
 2018-10-15 17:14:19,895 INFO 6119 [Timer] /Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/app/schedule/rotate_by_file.js next time will execute at 2018-10-16 00:00:01.000
+2018-10-16 15:49:53,960 INFO 5920 [Timer] /Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/app/schedule/clean_log.js next time will execute at 2018-10-17 00:00:00.000
+2018-10-16 15:49:53,961 INFO 5920 [Timer] /Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/app/schedule/rotate_by_file.js next time will execute at 2018-10-17 00:00:01.000
+2018-10-16 16:10:48,287 INFO 1050 [Timer] /Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/app/schedule/clean_log.js next time will execute at 2018-10-17 00:00:00.000
+2018-10-16 16:10:48,290 INFO 1050 [Timer] /Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/app/schedule/rotate_by_file.js next time will execute at 2018-10-17 00:00:01.000
+2018-10-16 20:45:53,070 INFO 2944 [Timer] /Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/app/schedule/clean_log.js next time will execute at 2018-10-17 00:00:00.000
+2018-10-16 20:45:53,071 INFO 2944 [Timer] /Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/app/schedule/rotate_by_file.js next time will execute at 2018-10-17 00:00:01.000

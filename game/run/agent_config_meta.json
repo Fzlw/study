@@ -1,262 +1,262 @@
 {
-  "keys": "D:\\liwei\\study\\game\\config\\config.default.js",
+  "keys": "/Users/fullstack/github/study/game/config/config.default.js",
   "view": {
     "mapping": {
-      ".xtpl": "D:\\liwei\\study\\game\\config\\config.default.js"
+      ".xtpl": "/Users/fullstack/github/study/game/config/config.default.js"
     },
-    "root": "D:\\liwei\\study\\game\\node_modules\\_egg-view@2.1.0@egg-view\\config\\config.default.js",
-    "cache": "D:\\liwei\\study\\game\\node_modules\\_egg-view@2.1.0@egg-view\\config\\config.local.js",
-    "defaultExtension": "D:\\liwei\\study\\game\\node_modules\\_egg-view@2.1.0@egg-view\\config\\config.default.js",
-    "defaultViewEngine": "D:\\liwei\\study\\game\\node_modules\\_egg-view@2.1.0@egg-view\\config\\config.default.js"
+    "root": "/Users/fullstack/github/study/game/node_modules/_egg-view@2.1.0@egg-view/config/config.default.js",
+    "cache": "/Users/fullstack/github/study/game/node_modules/_egg-view@2.1.0@egg-view/config/config.local.js",
+    "defaultExtension": "/Users/fullstack/github/study/game/node_modules/_egg-view@2.1.0@egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/fullstack/github/study/game/node_modules/_egg-view@2.1.0@egg-view/config/config.default.js"
   },
   "session": {
-    "maxAge": "D:\\liwei\\study\\game\\node_modules\\_egg-session@3.1.0@egg-session\\config\\config.default.js",
-    "key": "D:\\liwei\\study\\game\\node_modules\\_egg-session@3.1.0@egg-session\\config\\config.default.js",
-    "httpOnly": "D:\\liwei\\study\\game\\node_modules\\_egg-session@3.1.0@egg-session\\config\\config.default.js",
-    "encrypt": "D:\\liwei\\study\\game\\node_modules\\_egg-session@3.1.0@egg-session\\config\\config.default.js"
+    "maxAge": "/Users/fullstack/github/study/game/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
+    "key": "/Users/fullstack/github/study/game/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
+    "httpOnly": "/Users/fullstack/github/study/game/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
+    "encrypt": "/Users/fullstack/github/study/game/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js"
   },
   "security": {
-    "domainWhiteList": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-    "protocolWhiteList": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-    "defaultMiddleware": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
+    "domainWhiteList": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+    "protocolWhiteList": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
     "csrf": {
-      "enable": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-      "useSession": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-      "ignoreJSON": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-      "cookieName": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-      "sessionName": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-      "headerName": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-      "bodyName": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-      "queryName": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js"
+      "enable": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+      "useSession": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+      "cookieName": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+      "sessionName": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+      "headerName": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+      "bodyName": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+      "queryName": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js"
     },
     "xframe": {
-      "enable": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-      "value": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js"
+      "enable": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+      "value": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js"
     },
     "hsts": {
-      "enable": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.local.js",
-      "maxAge": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-      "includeSubdomains": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js"
+      "enable": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.local.js",
+      "maxAge": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js"
     },
     "dta": {
-      "enable": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js"
+      "enable": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js"
     },
     "methodnoallow": {
-      "enable": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js"
+      "enable": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js"
     },
     "noopen": {
-      "enable": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js"
+      "enable": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js"
     },
     "nosniff": {
-      "enable": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js"
+      "enable": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js"
     },
     "referrerPolicy": {
-      "enable": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-      "value": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js"
+      "enable": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+      "value": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js"
     },
     "xssProtection": {
-      "enable": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-      "value": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js"
+      "enable": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+      "value": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js"
     },
     "csp": {
-      "enable": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-      "policy": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js"
+      "enable": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+      "policy": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js"
     },
     "ssrf": {
-      "ipBlackList": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js",
-      "checkAddress": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js"
+      "ipBlackList": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js",
+      "checkAddress": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js"
     }
   },
   "helper": {
-    "shtml": "D:\\liwei\\study\\game\\node_modules\\_egg-security@2.4.0@egg-security\\config\\config.default.js"
+    "shtml": "/Users/fullstack/github/study/game/node_modules/_egg-security@2.4.0@egg-security/config/config.default.js"
   },
   "jsonp": {
-    "limit": "D:\\liwei\\study\\game\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js",
-    "callback": "D:\\liwei\\study\\game\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js",
-    "csrf": "D:\\liwei\\study\\game\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js"
+    "limit": "/Users/fullstack/github/study/game/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js",
+    "callback": "/Users/fullstack/github/study/game/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js",
+    "csrf": "/Users/fullstack/github/study/game/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js"
   },
   "onerror": {
-    "errorPageUrl": "D:\\liwei\\study\\game\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js",
-    "appErrorFilter": "D:\\liwei\\study\\game\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js",
-    "templatePath": "D:\\liwei\\study\\game\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js"
+    "errorPageUrl": "/Users/fullstack/github/study/game/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/fullstack/github/study/game/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js",
+    "templatePath": "/Users/fullstack/github/study/game/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js"
   },
   "i18n": {
-    "defaultLocale": "D:\\liwei\\study\\game\\node_modules\\_egg-i18n@2.0.0@egg-i18n\\config\\config.default.js",
-    "dirs": "D:\\liwei\\study\\game\\node_modules\\_egg-i18n@2.0.0@egg-i18n\\config\\config.default.js",
-    "queryField": "D:\\liwei\\study\\game\\node_modules\\_egg-i18n@2.0.0@egg-i18n\\config\\config.default.js",
-    "cookieField": "D:\\liwei\\study\\game\\node_modules\\_egg-i18n@2.0.0@egg-i18n\\config\\config.default.js",
-    "cookieMaxAge": "D:\\liwei\\study\\game\\node_modules\\_egg-i18n@2.0.0@egg-i18n\\config\\config.default.js"
+    "defaultLocale": "/Users/fullstack/github/study/game/node_modules/_egg-i18n@2.0.0@egg-i18n/config/config.default.js",
+    "dirs": "/Users/fullstack/github/study/game/node_modules/_egg-i18n@2.0.0@egg-i18n/config/config.default.js",
+    "queryField": "/Users/fullstack/github/study/game/node_modules/_egg-i18n@2.0.0@egg-i18n/config/config.default.js",
+    "cookieField": "/Users/fullstack/github/study/game/node_modules/_egg-i18n@2.0.0@egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/fullstack/github/study/game/node_modules/_egg-i18n@2.0.0@egg-i18n/config/config.default.js"
   },
   "watcher": {
-    "type": "D:\\liwei\\study\\game\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\config\\config.local.js",
+    "type": "/Users/fullstack/github/study/game/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.local.js",
     "eventSources": {
-      "default": "D:\\liwei\\study\\game\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\config\\config.default.js",
-      "development": "D:\\liwei\\study\\game\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\config\\config.default.js"
+      "default": "/Users/fullstack/github/study/game/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.default.js",
+      "development": "/Users/fullstack/github/study/game/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.default.js"
     }
   },
   "customLogger": {
     "scheduleLogger": {
-      "consoleLevel": "D:\\liwei\\study\\game\\node_modules\\_egg-schedule@3.4.0@egg-schedule\\config\\config.default.js",
-      "file": "D:\\liwei\\study\\game\\node_modules\\_egg-schedule@3.4.0@egg-schedule\\config\\config.default.js"
+      "consoleLevel": "/Users/fullstack/github/study/game/node_modules/_egg-schedule@3.4.0@egg-schedule/config/config.default.js",
+      "file": "/Users/fullstack/github/study/game/node_modules/_egg-schedule@3.4.0@egg-schedule/config/config.default.js"
     }
   },
   "multipart": {
-    "mode": "D:\\liwei\\study\\game\\node_modules\\_egg-multipart@2.2.1@egg-multipart\\config\\config.default.js",
-    "autoFields": "D:\\liwei\\study\\game\\node_modules\\_egg-multipart@2.2.1@egg-multipart\\config\\config.default.js",
-    "defaultCharset": "D:\\liwei\\study\\game\\node_modules\\_egg-multipart@2.2.1@egg-multipart\\config\\config.default.js",
-    "fieldNameSize": "D:\\liwei\\study\\game\\node_modules\\_egg-multipart@2.2.1@egg-multipart\\config\\config.default.js",
-    "fieldSize": "D:\\liwei\\study\\game\\node_modules\\_egg-multipart@2.2.1@egg-multipart\\config\\config.default.js",
-    "fields": "D:\\liwei\\study\\game\\node_modules\\_egg-multipart@2.2.1@egg-multipart\\config\\config.default.js",
-    "fileSize": "D:\\liwei\\study\\game\\node_modules\\_egg-multipart@2.2.1@egg-multipart\\config\\config.default.js",
-    "files": "D:\\liwei\\study\\game\\node_modules\\_egg-multipart@2.2.1@egg-multipart\\config\\config.default.js",
-    "fileExtensions": "D:\\liwei\\study\\game\\node_modules\\_egg-multipart@2.2.1@egg-multipart\\config\\config.default.js",
-    "whitelist": "D:\\liwei\\study\\game\\node_modules\\_egg-multipart@2.2.1@egg-multipart\\config\\config.default.js",
-    "tmpdir": "D:\\liwei\\study\\game\\node_modules\\_egg-multipart@2.2.1@egg-multipart\\config\\config.default.js",
+    "mode": "/Users/fullstack/github/study/game/node_modules/_egg-multipart@2.2.1@egg-multipart/config/config.default.js",
+    "autoFields": "/Users/fullstack/github/study/game/node_modules/_egg-multipart@2.2.1@egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/fullstack/github/study/game/node_modules/_egg-multipart@2.2.1@egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/fullstack/github/study/game/node_modules/_egg-multipart@2.2.1@egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/fullstack/github/study/game/node_modules/_egg-multipart@2.2.1@egg-multipart/config/config.default.js",
+    "fields": "/Users/fullstack/github/study/game/node_modules/_egg-multipart@2.2.1@egg-multipart/config/config.default.js",
+    "fileSize": "/Users/fullstack/github/study/game/node_modules/_egg-multipart@2.2.1@egg-multipart/config/config.default.js",
+    "files": "/Users/fullstack/github/study/game/node_modules/_egg-multipart@2.2.1@egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/fullstack/github/study/game/node_modules/_egg-multipart@2.2.1@egg-multipart/config/config.default.js",
+    "whitelist": "/Users/fullstack/github/study/game/node_modules/_egg-multipart@2.2.1@egg-multipart/config/config.default.js",
+    "tmpdir": "/Users/fullstack/github/study/game/node_modules/_egg-multipart@2.2.1@egg-multipart/config/config.default.js",
     "cleanSchedule": {
-      "cron": "D:\\liwei\\study\\game\\node_modules\\_egg-multipart@2.2.1@egg-multipart\\config\\config.default.js"
+      "cron": "/Users/fullstack/github/study/game/node_modules/_egg-multipart@2.2.1@egg-multipart/config/config.default.js"
     }
   },
   "development": {
-    "watchDirs": "D:\\liwei\\study\\game\\node_modules\\_egg-development@2.4.1@egg-development\\config\\config.default.js",
-    "ignoreDirs": "D:\\liwei\\study\\game\\node_modules\\_egg-development@2.4.1@egg-development\\config\\config.default.js",
-    "fastReady": "D:\\liwei\\study\\game\\node_modules\\_egg-development@2.4.1@egg-development\\config\\config.default.js",
-    "reloadOnDebug": "D:\\liwei\\study\\game\\node_modules\\_egg-development@2.4.1@egg-development\\config\\config.default.js",
-    "overrideDefault": "D:\\liwei\\study\\game\\node_modules\\_egg-development@2.4.1@egg-development\\config\\config.default.js"
+    "watchDirs": "/Users/fullstack/github/study/game/node_modules/_egg-development@2.4.1@egg-development/config/config.default.js",
+    "ignoreDirs": "/Users/fullstack/github/study/game/node_modules/_egg-development@2.4.1@egg-development/config/config.default.js",
+    "fastReady": "/Users/fullstack/github/study/game/node_modules/_egg-development@2.4.1@egg-development/config/config.default.js",
+    "reloadOnDebug": "/Users/fullstack/github/study/game/node_modules/_egg-development@2.4.1@egg-development/config/config.default.js",
+    "overrideDefault": "/Users/fullstack/github/study/game/node_modules/_egg-development@2.4.1@egg-development/config/config.default.js"
   },
   "logrotator": {
-    "filesRotateByHour": "D:\\liwei\\study\\game\\node_modules\\_egg-logrotator@3.0.3@egg-logrotator\\config\\config.default.js",
-    "hourDelimiter": "D:\\liwei\\study\\game\\node_modules\\_egg-logrotator@3.0.3@egg-logrotator\\config\\config.default.js",
-    "filesRotateBySize": "D:\\liwei\\study\\game\\node_modules\\_egg-logrotator@3.0.3@egg-logrotator\\config\\config.default.js",
-    "maxFileSize": "D:\\liwei\\study\\game\\node_modules\\_egg-logrotator@3.0.3@egg-logrotator\\config\\config.default.js",
-    "maxFiles": "D:\\liwei\\study\\game\\node_modules\\_egg-logrotator@3.0.3@egg-logrotator\\config\\config.default.js",
-    "rotateDuration": "D:\\liwei\\study\\game\\node_modules\\_egg-logrotator@3.0.3@egg-logrotator\\config\\config.default.js",
-    "maxDays": "D:\\liwei\\study\\game\\node_modules\\_egg-logrotator@3.0.3@egg-logrotator\\config\\config.default.js"
+    "filesRotateByHour": "/Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/fullstack/github/study/game/node_modules/_egg-logrotator@3.0.3@egg-logrotator/config/config.default.js"
   },
   "static": {
-    "prefix": "D:\\liwei\\study\\game\\node_modules\\_egg-static@2.1.1@egg-static\\config\\config.default.js",
-    "dir": "D:\\liwei\\study\\game\\node_modules\\_egg-static@2.1.1@egg-static\\config\\config.default.js",
-    "dynamic": "D:\\liwei\\study\\game\\node_modules\\_egg-static@2.1.1@egg-static\\config\\config.default.js",
-    "preload": "D:\\liwei\\study\\game\\node_modules\\_egg-static@2.1.1@egg-static\\config\\config.default.js",
-    "buffer": "D:\\liwei\\study\\game\\node_modules\\_egg-static@2.1.1@egg-static\\config\\config.default.js",
-    "maxFiles": "D:\\liwei\\study\\game\\node_modules\\_egg-static@2.1.1@egg-static\\config\\config.default.js"
+    "prefix": "/Users/fullstack/github/study/game/node_modules/_egg-static@2.1.1@egg-static/config/config.default.js",
+    "dir": "/Users/fullstack/github/study/game/node_modules/_egg-static@2.1.1@egg-static/config/config.default.js",
+    "dynamic": "/Users/fullstack/github/study/game/node_modules/_egg-static@2.1.1@egg-static/config/config.default.js",
+    "preload": "/Users/fullstack/github/study/game/node_modules/_egg-static@2.1.1@egg-static/config/config.default.js",
+    "buffer": "/Users/fullstack/github/study/game/node_modules/_egg-static@2.1.1@egg-static/config/config.default.js",
+    "maxFiles": "/Users/fullstack/github/study/game/node_modules/_egg-static@2.1.1@egg-static/config/config.default.js"
   },
   "xtpl": {
-    "cache": "D:\\liwei\\study\\game\\node_modules\\_egg-view-xtpl@1.2.0@egg-view-xtpl\\config\\config.local.js",
-    "catchError": "D:\\liwei\\study\\game\\node_modules\\_egg-view-xtpl@1.2.0@egg-view-xtpl\\config\\config.default.js",
-    "encoding": "D:\\liwei\\study\\game\\node_modules\\_egg-view-xtpl@1.2.0@egg-view-xtpl\\config\\config.default.js"
+    "cache": "/Users/fullstack/github/study/game/node_modules/_egg-view-xtpl@1.2.0@egg-view-xtpl/config/config.local.js",
+    "catchError": "/Users/fullstack/github/study/game/node_modules/_egg-view-xtpl@1.2.0@egg-view-xtpl/config/config.default.js",
+    "encoding": "/Users/fullstack/github/study/game/node_modules/_egg-view-xtpl@1.2.0@egg-view-xtpl/config/config.default.js"
   },
-  "env": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-  "name": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-  "proxy": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-  "protocolHeaders": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-  "ipHeaders": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-  "hostHeaders": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
+  "env": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+  "name": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+  "proxy": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+  "protocolHeaders": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+  "ipHeaders": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+  "hostHeaders": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
   "pkg": {
-    "name": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "version": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "description": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "main": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
+    "name": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "version": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "description": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "main": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
     "scripts": {
-      "test": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-      "dev": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+      "test": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+      "dev": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
     },
-    "author": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "license": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
+    "author": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "license": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
     "dependencies": {
-      "egg": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-      "egg-init": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-      "egg-view-nunjucks": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+      "egg": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+      "egg-init": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+      "egg-view-nunjucks": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
     },
     "devDependencies": {
-      "egg-bin": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-      "egg-view-xtpl": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+      "egg-bin": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+      "egg-view-xtpl": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
     }
   },
-  "baseDir": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-  "HOME": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-  "rundir": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
+  "baseDir": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+  "HOME": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+  "rundir": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
   "dump": {
-    "ignore": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+    "ignore": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
   },
   "confusedConfigurations": {
-    "bodyparser": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "notFound": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "sitefile": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "middlewares": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "httpClient": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+    "bodyparser": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "notFound": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "sitefile": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "middlewares": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "httpClient": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
   },
   "notfound": {
-    "pageUrl": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+    "pageUrl": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
   },
   "siteFile": {
-    "/favicon.ico": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+    "/favicon.ico": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
   },
   "bodyParser": {
-    "enable": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "encoding": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "formLimit": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "jsonLimit": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "strict": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
+    "enable": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "encoding": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "formLimit": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "jsonLimit": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "strict": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
     "queryString": {
-      "arrayLimit": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-      "depth": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-      "parameterLimit": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+      "arrayLimit": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+      "depth": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+      "parameterLimit": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
     }
   },
   "logger": {
-    "dir": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "encoding": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "env": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "level": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "consoleLevel": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "disableConsoleAfterReady": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "outputJSON": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "buffer": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "appLogName": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "coreLogName": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "agentLogName": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "errorLogName": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
+    "dir": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "encoding": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "env": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "level": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "consoleLevel": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "outputJSON": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "buffer": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "appLogName": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "coreLogName": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "agentLogName": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "errorLogName": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
     "coreLogger": {
-      "consoleLevel": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.local.js"
+      "consoleLevel": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.local.js"
     },
-    "allowDebugAtProd": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+    "allowDebugAtProd": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
   },
   "httpclient": {
-    "enableDNSCache": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "dnsCacheLookupInterval": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "dnsCacheMaxLength": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
+    "enableDNSCache": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
     "request": {
-      "timeout": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+      "timeout": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
     },
     "httpAgent": {
-      "keepAlive": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-      "freeSocketKeepAliveTimeout": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-      "maxSockets": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-      "maxFreeSockets": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+      "keepAlive": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+      "freeSocketKeepAliveTimeout": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+      "maxSockets": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+      "maxFreeSockets": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
     },
     "httpsAgent": {
-      "keepAlive": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-      "freeSocketKeepAliveTimeout": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-      "maxSockets": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-      "maxFreeSockets": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+      "keepAlive": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+      "freeSocketKeepAliveTimeout": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+      "maxSockets": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+      "maxFreeSockets": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
     }
   },
   "meta": {
-    "enable": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "logging": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+    "enable": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "logging": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
   },
-  "coreMiddleware": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-  "workerStartTimeout": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
+  "coreMiddleware": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+  "workerStartTimeout": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
   "cluster": {
     "listen": {
-      "path": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-      "port": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-      "hostname": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+      "path": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+      "port": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+      "hostname": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
     }
   },
   "clusterClient": {
-    "maxWaitTime": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js",
-    "responseTimeout": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+    "maxWaitTime": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js",
+    "responseTimeout": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
   },
-  "onClientError": "D:\\liwei\\study\\game\\node_modules\\_egg@2.12.0@egg\\config\\config.default.js"
+  "onClientError": "/Users/fullstack/github/study/game/node_modules/_egg@2.12.0@egg/config/config.default.js"
 }

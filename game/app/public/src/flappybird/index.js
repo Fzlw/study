@@ -15,6 +15,7 @@ class Game {
         this.fNo = 0;
         this.fitScreen()
         this.load();
+        this.bindEvent();
     }
 
     // 适配屏幕
@@ -78,43 +79,55 @@ class Game {
         let land = new Land(this.ctx, this.R, data);
         // 实例化管子
         // let pipe = new Pipe(this.ctx, this.R, data);
+        // 实例化小鸟
+        this.bird = new Bird(this.ctx, this.R, data);
         setInterval(() => {
-            // 清屏
+            // // 清屏
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-            // 更新背景
-            back.update();
-            // 限制管子的出现频率
-            if (this.fNo % 50 === 0) {
-                new Pipe(this.ctx, this.R, data, pipeArr);
-            }
-            // 渲染管子
-            if (pipeArr.length !== 0) {
-                pipeArr.forEach(pipe => {
-                    pipe.update();
-                })
-            }
-            console.log(pipeArr.length)
-            // 更新大地
-            land.update()
+            // // 更新背景
+            // back.update();
+            // // 限制管子的出现频率
+            // if (this.fNo % 50 === 0) {
+            //     new Pipe(this.ctx, this.R, data, pipeArr);
+            // }
+            // // 渲染管子
+            // if (pipeArr.length !== 0) {
+            //     pipeArr.forEach(pipe => {
+            //         pipe.update();
+            //     })
+            // }
+            // // 更新大地
+            let labdY = land.update();
+            // 更新小鸟
+            this.bird.update(labdY);
 
             // fNo
-            this.ctx.fillStyle = "black";
-            this.ctx.fillText(this.fNo, 0, 10);
-            this.fNo ++;
-        }, 200);
+            // this.ctx.fillStyle = "black";
+            // this.ctx.fillText(this.fNo, 0, 10);
+            // this.fNo ++;
+        }, data.renderTime * 1000);
     }
 
     // 常量
     getData() {
         return {
-            G: 9.8,    // 下落加速度
+            G: 1,    // 下落加速度
             SLICE: 0.618,    // 屏幕分隔比例
             WIDTH: this.canvas.width,    // 屏幕宽度
             HEIGHT: this.canvas.height,   // 屏幕高度
             bcakSpeed: 1,  // 背景移动速度
             landSpeed: 3,   // 大地移动速度
-            entranceWidth: 200    // 管子入口宽
+            entranceWidth: 200,    // 管子入口宽
+            renderTime: 0.02,   // 渲染时间间隔，单位s
         }
+    }
+
+    // 点击事件
+    bindEvent() {
+        this.canvas.onclick = () => {
+          console.log(234)
+          this.bird.fly();
+        };
     }
 }
 
