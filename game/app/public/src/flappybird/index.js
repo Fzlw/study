@@ -63,8 +63,8 @@ class Game {
                 this.ctx.fillStyle = "black"
                 this.ctx.fillText("123456", 0, 10);
                 if (count === len) {
-                    // this.start();
-                    this.test()
+                    this.start();
+                    // this.test()
                 }
             }
             img.src = baseUrl + item.url;
@@ -103,7 +103,7 @@ class Game {
             // 更新大地
             let labdY = land.update();
             // 更新小鸟
-            this.bird.update(labdY);
+            this.bird.update(labdY, this.fNo);
 
             // fNo
             this.ctx.fillStyle = "black";
@@ -136,12 +136,15 @@ class Game {
     // 测试各种情况
     test() {
         this.ctx.strokeStyle = "red"
-        this.ctx.strokeRect(50, 50, 100, 300)
-        this.ctx.save()
-        this.ctx.translate(25, 25);
-        this.ctx.rotate(Math.PI/6);
-        this.ctx.fillStyle = "yellow"
-        this.ctx.fillRect(50, 50, 100, 300);
+        this.ctx.strokeRect(50, 50, 100, 300);
+        this.ctx.save();
+        this.ctx.fillStyle = "yellow";
+        this.ctx.translate(100, 200);
+        this.ctx.rotate(Math.PI/2);
+        this.ctx.fillRect(-50, -150, 100, 300);
+        
+        
+        
         this.ctx.restore();
     }
 }
