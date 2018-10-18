@@ -56,6 +56,7 @@ class HomeController extends Controller {
         wss.on('connection', function connection(ws, req) {
             
             users.push(ws);
+            // update
 
             // if (users.indexOf()) {
 
