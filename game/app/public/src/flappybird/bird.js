@@ -15,8 +15,8 @@ class Bird {
             a_2: [174, 982]
         };
         this.index = 0;  // 小鸟拍打翅膀的索引
-        this.dX = (this.data.WIDTH * (1 - this.data.SLICE)) / 2;
-        this.dY = (this.data.HEIGHT * this.data.SLICE) / 2;
+        this.dX = (this.data.WIDTH * (1 - this.data.SLICE)) / 2;   // 小鸟的X坐标
+        this.dY = (this.data.HEIGHT * this.data.SLICE) / 2;  // 小鸟的Y坐标
         this.count = 0; // 帧数
         this.angle = 0.1; // 下落每帧旋转角度
         this.flyPow = 0; // 飞行能量
@@ -40,7 +40,12 @@ class Bird {
         this.ctx.restore();
     }
 
-    // 大地Y坐标，总编号
+    /**
+     * 
+     * @param {number} labdY 大地Y坐标
+     * @param {number} fNo 总帧号
+     * @returns {arr} 返回小鸟左上角XY坐标
+     */
     update(labdY, fNo) {
         this.dY += this.count * this.data.G;
         if (this.dY > labdY - this.birdSize[1]) { // 不能进入大地
@@ -61,7 +66,7 @@ class Bird {
         this.flyPow <= 0 ? this.flyPow = 0 : this.flyPow--;
         this.angle <= Math.PI / 2 ? this.angle += Math.PI / 180 : this.angle = 0;
         this.flyAngle <= 0 ? this.flyAngle = 0 : this.flyAngle -= Math.PI / 180;
-        return 
+        return [this.dX ,this.dY];
     }
     // 返回鸟的大小以及坐标
     getBirdInfo() {

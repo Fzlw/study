@@ -2,7 +2,7 @@
  * 管子缺少一帧没有绘制  
  * 因为数组长度的突然变化导致的
  * 
- * 做小鸟的动画   TODO
+ * 做小鸟的动画   OK
  */
 class Game {
     constructor(canvas) {
@@ -85,25 +85,28 @@ class Game {
         // let pipe = new Pipe(this.ctx, this.R, data);
         // 实例化小鸟
         this.bird = new Bird(this.ctx, this.R, data);
-        setInterval(() => {
+        let timmer = setInterval(() => {
             // // 清屏
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
             // 更新背景
             back.update();
             // 限制管子的出现频率
             if (this.fNo % 50 === 0) {
-                new Pipe(this.ctx, this.R, data, pipeArr);
-            }
-            // 渲染管子
-            if (pipeArr.length !== 0) {
-                pipeArr.forEach(pipe => {
-                    pipe.update();
-                })
+                new Pipe(this.ctx, this.R, data, pipeArr, timmer);
             }
             // 更新大地
             let labdY = land.update();
             // 更新小鸟
-            this.bird.update(labdY, this.fNo);
+            let birdPosition = this.bird.update(labdY, this.fNo);
+            // 渲染管子
+            this.ctx.save();
+            // this.globalCompositeOperation = "destination-over"
+            if (pipeArr.length !== 0) {
+                pipeArr.forEach(pipe => {
+                    pipe.update(birdPosition);
+                })
+            }
+            this.ctx.restore()
 
             // fNo
             this.ctx.fillStyle = "black";
