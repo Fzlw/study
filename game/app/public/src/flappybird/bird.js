@@ -14,13 +14,20 @@ class Bird {
             a_1: [230, 710],
             a_2: [174, 982]
         };
-        this.index = 0;  // 小鸟拍打翅膀的索引
-        this.dX = (this.data.WIDTH * (1 - this.data.SLICE)) / 2;   // 小鸟的X坐标
-        this.dY = (this.data.HEIGHT * this.data.SLICE) / 2;  // 小鸟的Y坐标
+        this.boom = {
+            b_0: [320, 734, 118, 91],
+            b_1: [456, 734, 117, 113],
+            b_2: [385, 548, 103, 97]
+        }
+        this.index = 0; // 小鸟拍打翅膀的索引
+        this.dX = (this.data.WIDTH * (1 - this.data.SLICE)) / 2; // 小鸟的X坐标
+        this.dY = (this.data.HEIGHT * this.data.SLICE) / 2; // 小鸟的Y坐标
         this.count = 0; // 帧数
         this.angle = 0.1; // 下落每帧旋转角度
         this.flyPow = 0; // 飞行能量
         this.flyAngle = 0; // 小鸟飞时抬升角度
+        this.labdY = 502 - 107 + (this.data.HEIGHT - 502) * this.data.SLICE; // 大地Y坐标
+        this.isEnd = false;
     }
     create() {
         const sX = this.action["a_" + this.index][0],
@@ -35,38 +42,41 @@ class Bird {
         } else {
             this.ctx.rotate(this.angle);
         }
-        // this.ctx.drawImage(this.img, sX, sY, W, H, -(W / 2), -(H / 2), W, H);
-        this.ctx.fillRect(-(W / 2), -(H / 2), W, H);
+        this.ctx.drawImage(this.img, sX, sY, W, H, -(W / 2), -(H / 2), W, H);
+        // this.ctx.fillStyle = "red"
+        // this.ctx.fillRect(-(W / 2), -(H / 2), W, H);
         this.ctx.restore();
     }
 
     /**
-     * 
-     * @param {number} labdY 大地Y坐标
      * @param {number} fNo 总帧号
      * @returns {arr} 返回小鸟左上角XY坐标
      */
-    update(labdY, fNo) {
+    update(fNo) {
         this.dY += this.count * this.data.G;
-        if (this.dY > labdY - this.birdSize[1]) { // 不能进入大地
-            this.dY = labdY - this.birdSize[1];
-
+        if (this.dY > this.labdY - this.birdSize[1]) { // 不能进入大地
+            this.dY = this.labdY - this.birdSize[1];
+            this.isEnd = true;
         } else if (this.dY <= 0) { // 不能超过天空
             this.dY = 0;
             this.count = 0;
         }
         this.create();
-
         // 每100帧小鸟拍打一次翅膀
-        if (fNo % 10 === 0) {
-            this.index >= 2 ? this.index = 0 : this.index ++;
+        if (fNo % 10 === 0 && !this.isEnd) {
+            this.index >= 2 ? this.index = 0 : this.index++;
         }
 
         this.count++;
         this.flyPow <= 0 ? this.flyPow = 0 : this.flyPow--;
-        this.angle <= Math.PI / 2 ? this.angle += Math.PI / 180 : this.angle = 0;
+        if (this.isEnd) {
+            this.angle = this.angle;
+        } else {
+            this.angle <= Math.PI / 2 ? this.angle += Math.PI / 180 : this.angle = 0;
+        }
         this.flyAngle <= 0 ? this.flyAngle = 0 : this.flyAngle -= Math.PI / 180;
-        return [this.dX ,this.dY];
+        // console.log(this.dX ,this.dY)
+        return this.isEnd ? [0, 0] : [this.dX, this.dY];
     }
     // 返回鸟的大小以及坐标
     getBirdInfo() {
@@ -79,14 +89,15 @@ class Bird {
         this.flyAngle = Math.PI / 6; // 每次抬升30度
         this.count -= this.flyPow;
     }
-    changeAction() {
-        if (this.flyPow > 0) {
-            // 飞的条件
-        } else {
-            this.ctx.save();
-            this.ctx.translate(this.dX + this.birdSize[0] / 2, this.dY + this.birdSize[1] / 2);
-            this.ctx.rotate(this.angle);
-            this.ctx.restore();
+
+    endBoom(fNo, XY) {
+        if (fNo % 10 === 0) {
+            this.index >= 2 ? this.index = 0 : this.index++;
         }
+        let boom = this.boom['b_' + this.index];
+        this.ctx.save()
+        this.ctx.translate((XY[0] + boom[2]) / 2, (XY[1] + boom[3]) / 2);
+        this.ctx.drawImage(this.img, boom[0], boom[1], boom[2], boom[3], -XY[0] / 2, -XY[1] / 2, boom[2], boom[3]);
+        this.ctx.restore()
     }
 }

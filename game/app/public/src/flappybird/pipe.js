@@ -30,7 +30,7 @@ class Pipe {
         this.startX = this.data.WIDTH + 288; // 管子的起始X坐标  + 背景宽
         this.posY_u = baseH + parseInt(Math.random() * 150);
         this.posY_d = sH - Math.abs(this.posY_u) + this.entranceWidth;
-        this.create();
+        this.isPassed = false;
         this.pipeArr.push(this);
     }
 
@@ -56,11 +56,11 @@ class Pipe {
         // 如果消失就清除，突变的那一帧会缺失，所以消失一段距离后在删除 * 4
         if (this.startX <= -4 * this.upPipe.size[0]) {
             this.pipeArr.shift();
-            return;
         }
         // 进行碰撞检测
-        this.checkTouch(birdPosition);
+        let isPass = this.checkTouch(birdPosition);
         this.create();
+        return isPass;
     }
 
     /**
@@ -71,14 +71,26 @@ class Pipe {
         // 管子碰撞检测
         let pipe_u_y = this.posY_u + this.upPipe.size[1],
             pipe_u_x = this.startX,
-            pipe_d_y = this.posY_d,
+            pipe_d_y = pipe_u_y + this.entranceWidth,
             [X, Y] = birdPosition;
-        console.log((Y < pipe_d_y && X < pipe_u_x + this.upPipe.size[0] && X > pipe_u_x))
-        console.log(Y, pipe_d_y)
-        if ((Y < pipe_u_y && (X + this.birdSize[0]) >= pipe_u_x) ||
-            (Y < pipe_d_y && X < pipe_u_x + this.upPipe.size[0] && X > pipe_u_x)
+        // console.log((Y < pipe_d_y && X < pipe_u_x + this.upPipe.size[0] && X > pipe_u_x))
+        // console.log(Y, pipe_d_y)
+        // 上管子碰撞检测
+        if ((Y < pipe_u_y && (X + this.birdSize[0]) > pipe_u_x && X + this.birdSize[0] < pipe_u_x + this.upPipe.size[0]) ||
+            (Y < pipe_u_y && X < pipe_u_x + this.upPipe.size[0] && X > pipe_u_x)
         ) {
-            clearInterval(this.timmer);
+            return 0;
+            // 下管子碰撞检测
+        } else if ((Y + this.birdSize[1] > pipe_d_y && X + this.birdSize[0] > pipe_u_x && X + this.birdSize[0] < pipe_u_x + this.downPipe.size[0]) ||
+            (Y + this.birdSize[1] > pipe_d_y && X > pipe_u_x && X < pipe_u_x + this.downPipe.size[0])) {
+            return 0;
+        } else if (X > pipe_u_x + this.upPipe.size[0] && !this.isPassed) {
+            this.isPassed = true;
+            return 1;
         }
+    }
+
+    stop() {
+        this.pipeSpeed = 0;
     }
 }

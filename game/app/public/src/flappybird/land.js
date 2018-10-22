@@ -28,4 +28,7 @@ class Land {
 
     return this.render();
   }
+  stop() {
+    this.DATA.landSpeed = 0;
+  }
 }

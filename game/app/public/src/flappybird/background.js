@@ -32,4 +32,8 @@ class BackGround {
         
         this.backImg();
     }
+
+    stop() {
+        this.DATA.bcakSpeed = 0;
+    }
 }
