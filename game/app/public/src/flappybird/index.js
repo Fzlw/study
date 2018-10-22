@@ -31,6 +31,7 @@ class Game {
             w: 24,
             h: 36
         }
+        this.userGrade = [];
         this.fitScreen()
         this.load();
         this.bindEvent();
@@ -89,7 +90,7 @@ class Game {
     /**
      * 场景管理器
      */
-    sceneManage(state) {
+    sceneManage(state, options) {
         this.state = state;
         switch (state) {
             case 1:
@@ -100,9 +101,11 @@ class Game {
                 // this.start()
                 break;
             case 3:
-                console.log(45367856754)
                 this.start();
                 this.bird.fly();
+                break;
+            case 4:
+                this.state4(options);
                 break;
         }
     }
@@ -279,7 +282,7 @@ class Game {
                     // 返回0 表示小鸟和管子碰撞了，结束游戏
                     if (isPass === 0) {
                         isEnd = true;
-                        
+
                     }
                     if (isEnd) {
                         pipe.stop();
@@ -292,11 +295,12 @@ class Game {
             // 更新分数
             this.renderGrade(grade);
             if (isEnd) {
-                clearInterval(timmer);
-                land.stop();
-                back.stop();
-                // 展示分数
-                this.showGrade(grade);
+                this.sceneManage(4, {
+                    grade,
+                    timmer,
+                    land,
+                    back
+                });
             }
 
             // fNo
@@ -304,6 +308,21 @@ class Game {
             this.ctx.fillText(this.fNo, 0, 10);
             this.fNo++;
         }, data.renderTime * 1000);
+    }
+
+    state4(options) {
+        let {
+            grade,
+            timmer,
+            land,
+            back
+        } = options
+        clearInterval(timmer);
+        land.stop();
+        back.stop();
+        this.userGrade.push(grade);
+        // 展示分数
+        this.showGrade(grade);
     }
 
     // 常量
@@ -320,12 +339,12 @@ class Game {
         }
     }
 
-    renderGrade(grade) {
+    renderGrade(grade, end = false) {
         let str = grade.toString(),
             len = str.length,
             W = len * this.grade.w,
-            centerX = (this.canvas.width - W) / 2,
-            Y = 50,
+            centerX = !end ? (this.canvas.width - W) / 2 : 270,
+            Y = !end ? 50 : 200,
             i = 0;
         while (i < len) {
             let self = this.grade['n_' + str[i]];
@@ -336,23 +355,48 @@ class Game {
     }
 
     showGrade(grade) {
-        if (grade < 10) {
-            alert('垃圾琼琼，才' + grade + '分');
-        } else if (grade > 15 && grade < 30) {
-            alert('小琼琼居然还能拿' + grade + '分')
-        } else if (grade > 30) {
-            alert('老婆超棒，得分' + grade + '分')
-        }
+        // if (grade < 10) {
+        //     alert('垃圾琼琼，才' + grade + '分');
+        // } else if (grade > 15 && grade < 30) {
+        //     alert('小琼琼居然还能拿' + grade + '分')
+        // } else if (grade > 30) {
+        //     alert('老婆超棒，得分' + grade + '分')
+        // }
+        let over = [790, 118, 192, 42],
+            panel = [6, 519, 226, 114],
+            startBtn = [708, 237, 104, 58];
+        this.userGrade.sort((a, b) => b - a);
+        this.ctx.drawImage(this.R["allImg"], over[0], over[1], over[2], over[3], (this.canvas.width - over[2]) / 2, 90, over[2], over[3]);
+        this.ctx.drawImage(this.R["allImg"], panel[0], panel[1], panel[2], panel[3], (this.canvas.width - panel[2]) / 2, 110 + over[3], panel[2], panel[3]);
+        this.ctx.drawImage(this.R["allImg"], startBtn[0], startBtn[1], startBtn[2], startBtn[3], (this.canvas.width - startBtn[2]) / 2, 130 + over[3] + panel[3], startBtn[2], startBtn[3]);
+        this.ctx.fillStyle = "black"
+        this.ctx.font = 15 + 'px Roboto-Medium'
+        this.ctx.fillText(grade, 270, 200)
+        this.ctx.fillText(this.userGrade[0] ? this.userGrade[0] : '', 270, 240)
+        console.log(this.userGrade)
     }
 
     // 点击事件
     bindEvent() {
-        this.canvas.onclick = () => {
+        let over = [790, 118, 192, 42],
+            panel = [6, 519, 226, 114],
+            startBtn = [708, 237, 104, 58];
+        this.canvas.onclick = (e) => {
             if (this.state === 2) {
                 this.isClickCanvas = true;
             }
             if (this.state === 3) {
                 this.bird.fly();
+            }
+            if (this.state === 4) {
+                let {
+                    clientX,
+                    clientY
+                } = e;
+                if (clientX > (this.canvas.width - startBtn[2]) / 2 && clientX < (this.canvas.width - startBtn[2]) / 2 + startBtn[2] &&
+                    clientY > 130 + over[3] + panel[3] && clientY < 130 + over[3] + panel[3] + startBtn[3]) {
+                    this.sceneManage(2)
+                }
             }
         };
     }
