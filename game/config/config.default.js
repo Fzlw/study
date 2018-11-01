@@ -7,7 +7,6 @@ exports.view = {
 };
 exports.cluster = {
     listen: {
-      path: '',
       port: 2018,
       hostname: '0.0.0.0',
     }
