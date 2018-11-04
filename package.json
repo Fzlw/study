@@ -14,7 +14,8 @@
     "uuid": "^3.3.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pm2 start service.js"
   },
   "repository": {
     "type": "git",
