@@ -3,3 +3,4 @@ react/hello/node_modules
 react/autoReact/node_modules
 game/logs
 game/run
+.DS_Store
