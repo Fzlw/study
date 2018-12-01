@@ -8,6 +8,7 @@
             height: 800px;
             margin:50px auto;
             position: relative;
+            border: 1px solid red;
         }
         .tag{
             display: block;
@@ -134,6 +135,7 @@
 
         if("addEventListener" in window){
             paper.addEventListener("mousemove" , function(event){
+                console.log(event.clientX)
                 var x = event.clientX - EX - CX;
                 var y = event.clientY - EY - CY;
                 // angleY = -x* (Math.sqrt(Math.pow(x , 2) + Math.pow(y , 2)) > RADIUS/4 ? 0.0002 : 0.0001);
