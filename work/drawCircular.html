@@ -5,8 +5,8 @@
     <title>Document</title>
     <style>
         div{
-            width: 20px;
-            height: 20px;
+            width: 200px;
+            height: 200px;
             background-color: red;
             border-radius: 50%;
             position: absolute;
@@ -14,23 +14,21 @@
     </style>
     <script src="zepto-1.2.0.js"></script>
     <script>
-        let x = 30;
+        // let x = 30;
         $(document).click(() => {
             $('div').css({'left': x, 'top': ch(x)});
-            console.log(x, ch(x))
-            x += 1;
         })
 
 
 
 
-        function ch(x) {
-            let z = 100 - Math.pow((x - 20), 2);
-            if (z < 0) {
-                return -Math.sqrt(-z) + 20;
-            }
-            return Math.sqrt(z) + 20;
-        }
+        // function ch(x) {
+        //     let z = 100 - Math.pow((x - 20), 2);
+        //     if (z < 0) {
+        //         return -Math.sqrt(-z) + 20;
+        //     }
+        //     return Math.sqrt(z) + 20;
+        // }
     </script>
 </head>
 <body>
