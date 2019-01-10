@@ -14,9 +14,10 @@ driver.get(url)
 #     f.write(driver.page_source)
 #     driver.quit()
 
-soup = BeautifulSoup(driver.page_source, 'html.parser')
+# soup = BeautifulSoup(driver.page_source, 'html.parser')
+# driver.find_element_by_id('cateToggleLink').click()
 
-cateListBox = soup.find(id='cateListBox')
+# cateListBox = soup.find(id='cateListBox')
 
 
 with open('/Users/fullstack/github/study/python/spider/data.html', 'w') as f:
