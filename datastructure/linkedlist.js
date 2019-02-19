@@ -1,76 +1,142 @@
 // 数据结构  链表
-class LinkedList {
+module.exports = class LinkedList {
 
     constructor() {
-        this.link = [];
+        this.length = 0;
         this.head = null;
     }
 
-    append(ele) {
+    // 向列表尾部添加一个新的项
+    append(element) {
         const node = {
-            value: ele,
+            value: element,
             next: null
         }
-        this.link.push(node);
-
         if (this.isEmpty()) {
             this.head = node;
         } else {
-            let last = this.link[this.link.length - 1];
-            last.next = node;
+            let _last = this.head;
+            // 找到最后一项
+            while(_last.next) {
+                _last = _last.next;
+            }
+            _last.next = node;
         }
+        this.length ++;
     }
 
-    isEmpty() {
-        return this.link.length === 0;
+    // 向列表的特定位置插入一个新的项
+    insert(position, element) {
+        if (position < 0 || position > this.length) throw new Error('beyond index');
+        let node = {
+            value: element,
+            next: null
+        };
+        this.length ++;
+        if (position === 0) {
+            node.next = this.head;
+            this.head = node;
+            return;
+        }
+        let _index = 0,
+            prev = this.head;
+        while(position - 1 !== _index) {
+            prev = prev.next;
+            _index ++;
+        }
+        node.next = prev.next;
+        prev.next = node;
+    }
+
+    // 从列表中移除一项
+    remove(element) {
+        // 是否移除的是第一项
+        if (this.head.value === element) {
+            this.head = this.head.next;
+        } else {
+            let prev = this.head;
+            let cur = this.head.next;
+            while(cur) {
+                if (cur.value === element) {
+                    prev.next = cur.next || null;
+                    break;
+                }
+                prev = cur;
+                cur = cur.next;
+            }
+        }
+        this.length --;
+    }
+
+    indexOf(element) {
+        let cur = this.head,
+            _index = -1;
+        while(cur) {
+            _index += 1;
+            if (cur.value === element) {
+                return _index;
+            }
+            cur = cur.next;
+        }
+        return -1;
+    }
+
+    removeAt(position) {
+        // 没有对position 做判断
+        this.length --;
+        if (position === 0) {
+            this.head = this.head.next || null;
+            return;
+        }
+        let cur = this.head;
+        let _index = 0;
+        while(cur) {
+            if (_index === position - 1) {
+                cur.next = cur.next.next ? cur.next.next : null;
+                break;
+            }
+            cur = cur.next;
+            _index ++;
+        }
     }
 
     size() {
-        return this.link.length;
+        return this.length;
+    }
+
+    isEmpty() {
+        return this.length === 0;
     }
 
     toString() {
-        return this.link.map(ele => ele.value).toString();
-    }
-
-    indexOf(ele) {
-        let _index = -1;
-        for (let i in this.link) {
-            if (this.link[i].value === ele) {
-                _index = i;
-                break;
-            }
+        let cur = this.head;
+        let str = '';
+        while(cur) {
+            str += cur.value;
+            cur = cur.next;
         }
-        return _index;
-    }
-
-    removeAt(index) {
-        this.link.splice(index, 1);
-        if (index === 0) {
-            this.head = this.link[index + 1];
-            return;
-        } else {
-            this.link[index - 1].next = this.link[index + 1] || null;
-        }
-    }
-
-    remove(ele) {
-        let index = this.indexOf(ele);
-        if (index !== -1) {
-            this.removeAt(index);
-        }
-    }
-
-    insert(position, ele) {
-        let cur = {
-            value: ele,
-            next: this.link[position + 1] || null
-        }
-        if (position === 0) {
-            this.head = cur;
-        } else {
-            this.link[position - 1].next = cur;
-        }
+        return str;
     }
 
 }
+
+// test
+// let link = new LinkedList();
+
+// // console.log(link.isEmpty())
+// // console.log(link.size())
+
+// link.append('liwei')
+// link.append(22)
+// link.append('codeer')
+
+// console.log(link.toString())
+// console.log(link.size())
+
+// // link.remove('codeer')
+// // link.removeAt(2)
+// // console.log(link.indexOf('codeer'))
+// // link.insert(2, 'haha')
+// console.log(link.indexOf('liwei'))
+// console.log(link.toString())
+// console.log(link.size())
