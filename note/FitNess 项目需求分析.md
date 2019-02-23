@@ -12,7 +12,7 @@
 
 
 ### 小程序用户端API整理
-1. 获取我的预约课程信息  // 我的预约
+1. 获取我的预约课程信息  // k
 	* router: `user/course?uid=:userId&date=:date`
 	* method: GET
 	* params
@@ -73,6 +73,7 @@
 			Success: true, // 请求是否成功
 			Code: 200, // 请求响应状态码
 			Message: '', // 请求响应信息
+			
 			CoachName: xxx, // 教练姓名
 			CoachIcon: xxx, // 教练头像
 			CourseName: xxx, // 课程名称
