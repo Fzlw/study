@@ -1,7 +1,18 @@
 const crypto = require('crypto');
 
-const hash = crypto.createHash('md5')
+function aesEncrypt(data, key) {
+    const cipter = crypto.createCipher('aes192', key);
+    let crypted = cipter.update(data, 'utf8', 'hex');
+    crypted += cipter.final('hex');
+    return crypted;
+}
 
-hash.update('liwei')
+function aesDecrypt(encrypted, key) {
+    const decipher = crypto.createDecipher('aes192', key);
+    var decrypted = decipher.update(encrypted, 'hex', 'utf8');
+    decrypted += decipher.final('utf8');
+    return decrypted;
+}
 
-console.log(hash.digest('lll').toString())
+console.log(aesEncrypt('liwei', 'liwei'))
+console.log(aesDecrypt('c620870af262724de6f3317a38611720', 'liwei'))
