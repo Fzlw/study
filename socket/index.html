@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+  <input type="text" class="txt">
+  <input class="btn" type="button" value="send">
+  
+  <script>
+    const ws = new WebSocket('ws://localhost:3000');
+    ws.onopen = () => {
+      console.log('连接成功...')
+    }
+    ws.onmessage = dataObj => {
+     console.log('data:'+dataObj.data)
+    }
+
+    $('.btn').click(() => {
+      ws.send($('.txt').val())
+    })
+  </script>
+</body>
+</html>
